@@ -113,13 +113,16 @@ import ThankYouPage from "ThankYouPage.js";
 import AwardsPage from "pages/Awards.js";
 import TempPage from "pages/Temp.js";
 import FellowshipsPage from "pages/Fellowships.js";
-
+import ListedProjects from "../src/components/research projects/ListedProjects";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import REACT_GA from "react-ga4";
-
+import JoinUs from "pages/Join";
+import TrustedBy from "components/misc/TrustedBy";
+import Partners from "pages/Partners";
+import News from "pages/News";
 // Google analytics initialization
 const GA_TRACKING_ID = "G-9KB91DXTSJ";
 REACT_GA.initialize(GA_TRACKING_ID);
@@ -168,6 +171,18 @@ export default function App() {
                 <Route path="/awards">
                     <AwardsPage />
                 </Route>
+                <Route path="/research-projects">
+                    <ListedProjects />
+                </Route>
+                <Route path="/join-us">
+                    <JoinUs />
+                </Route>
+                <Route path="/partners">
+                    <Partners />
+                    </Route>
+                <Route path="/news">
+                    <News />
+                    </Route>
                 <Route path="/">
                     <SaaSProductLandingPage />
                     {/* <MainLandingPage /> */}

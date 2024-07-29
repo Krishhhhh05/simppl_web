@@ -292,7 +292,7 @@ export default ({
             <ContentWithPaddingXl>
                 <HeadingContainer>
                     {subheading && <Subheading>{subheading}</Subheading>}
-                    {heading && <Heading>Meet these Fine Folks.</Heading>}
+                    {heading && <Heading>Meet these fine folks.</Heading>}
                     {description && <Description>{description}</Description>}
                 </HeadingContainer>
                 <Cards>

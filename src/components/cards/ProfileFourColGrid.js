@@ -38,6 +38,9 @@ const CardContent = styled.div`
   .position {
     ${tw`uppercase font-semibold tracking-widest text-[10px] text-primary-500`}
   }
+    .uni {
+    ${tw`mt-2  bg-blue-200 text-black text-[10px] p-1 rounded-full`}
+  }
   .name {
     ${tw`mt-1 text-sm md:text-lg font-medium text-gray-900`}
   9
@@ -86,6 +89,7 @@ export default ({
                                 key={index}
                                 name={member.name}
                                 position={member.position}
+                                uni={member.uni}
                                 imageSrc={member.imageSrc}
                                 linkedIn={member.links[0].url}
                                 github={member.links[1].url}
@@ -128,6 +132,7 @@ export default ({
                                 key={index}
                                 name={member.name}
                                 position={member.position}
+                                uni={member.uni}
                                 imageSrc={member.imageSrc}
                                 linkedIn={member.links[0].url}
                                 github={member.links[1].url}
@@ -140,13 +145,16 @@ export default ({
     );
 };
 
-const ProfileCard = ({ name, position, imageSrc, linkedIn, github }) => {
+const ProfileCard = ({ name, position, uni, imageSrc, linkedIn, github }) => {
     return (
         <Card>
             <CardImage imageSrc={imageSrc} />
             <CardContent>
                 <span className="position">{position}</span>
+                <span className="uni">{uni}</span>
+
                 <span className="name">{name}</span>
+
                 <CardLinks>
                     {linkedIn && (
                         <a className="link" href={linkedIn}>
@@ -168,6 +176,7 @@ const teamData = [
     {
         imageSrc: "/team/Swapneel_Mehta.jpg",
         position: "Founder",
+        uni:" @ Boston University",
         name: "Swapneel Mehta",
         links: [
             {
@@ -183,6 +192,7 @@ const teamData = [
     {
         imageSrc: "/team/RaghavJain.jpg",
         position: "Research Engineer",
+        uni:"@ Boston University",
         name: "Raghav Jain",
         links: [
             {
@@ -197,7 +207,8 @@ const teamData = [
     },
     {
         imageSrc: "/team/dhara_mungra.jpg",
-        position: "Research Engineer",
+        position: "Research Engineer",        
+        uni:"@ Boston University",
         name: "Dhara Mungra",
         links: [
             {

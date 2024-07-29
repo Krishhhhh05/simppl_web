@@ -23,7 +23,7 @@ export const NavLinks = tw.div`flex justify-between items-center`;
  */
 export const NavLink = tw.a`
 relative
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  text-base my-2 lg:text-sm lg:mx-6 lg:my-0 
   font-semibold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `;
@@ -68,6 +68,10 @@ const Dropdown = ({ children }) => {
     return (
         <div onClick={() => setShowDropdown(!showDropdown)} tw="z-50">
             <NavLinks tw="z-50">
+
+</NavLinks>
+                     <NavLinks tw="z-50">
+
                 <NavLink href="#">Fellowships</NavLink>
             </NavLinks>
             {showDropdown && (
@@ -78,6 +82,8 @@ const Dropdown = ({ children }) => {
                     </NavLink>
                 </DropdownStyles>
             )}
+
+
         </div>
     );
 };
@@ -109,8 +115,15 @@ export default ({
       <NavLink href="/#">Pricing</NavLink> */}
             <Dropdown />
             {/* <NavLink href="/fellowships">Fellowships</NavLink> */}
-            <NavLink href="/products">Products</NavLink>
+            <NavLink href="/research-projects">Research projects</NavLink>
+            <NavLink href="/join-us">Work With Us</NavLink>
+
+            {/* <NavLink href="/products">Products</NavLink> */}
+            <NavLink href="/partners">Partners & Collaboration</NavLink>
+
             <NavLink href="/team">Team</NavLink>
+
+            <NavLink href="/news">News and Featured</NavLink>
             {/* <NavLink href="/#" tw="lg:ml-12!">
         Login
       </NavLink> */}

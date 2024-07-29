@@ -16,10 +16,13 @@ import Footer from "components/footers/MiniCenteredFooter.js";
 import hateSpeech from "images/hate-speech.jpg";
 import DesignIllustration from "images/main-growth.jpg";
 import SakhiGIF from "images/sakhi.gif";
-
+import FullWidth from "../components/hero/FullWidth";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as CPUIcon } from "feather-icons/dist/icons/cpu.svg";
+import Header from "components/headers/light.js";
 
+
+import FullWidthWithImage from "components/hero/FullWidthWithImage";
 // import socialMediaNetworking from "images/social-media-networking.gif";
 // import fakeNews from "images/fake-news.jpg";
 // import dataVis from "images/data-vis.jpg";
@@ -117,8 +120,11 @@ export default () => {
 
   return (
     <AnimationRevealPage>
-      <Hero roundedHeaderButton={true} />
+      {/* <Hero roundedHeaderButton={false} /> */}
+      <Header />
+      <FullWidth/>
 
+      {/* https://media.istockphoto.com/id/535555239/photo/happy-indian-school-children.jpg?s=612x612&w=0&k=20&c=fcpTUHiHJuaeRS-xHJy4oOflwKpBooiPecyewzohvhk= */}
       <AnimatedButton />
 
       <TrustedBy />
